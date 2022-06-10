@@ -4,6 +4,16 @@
 	padding: 0 2rem;
 }
 
+@media (max-width: 40rem) {
+	.comments {
+		overflow-y: unset;
+	}
+}
+
+.single.comments {
+	padding: 0px;
+}
+
 .comments li {
 	margin-bottom: 0.5rem;
 	line-height: 1.2;
