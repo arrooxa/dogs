@@ -1,0 +1,26 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.button {
+	font-weight: bold;
+	background: #333;
+	color: #fb1;
+	padding: 0.8rem 1.2rem;
+	border-radius: 0.4rem;
+	font-size: 1rem;
+	cursor: pointer;
+	border: none;
+	box-sizing: border-box;
+}
+
+.button:focus,
+.button:hover {
+	background: #fb1;
+	transition: 0.2s ease-in-out;
+	color: #333;
+}

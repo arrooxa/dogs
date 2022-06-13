@@ -22,8 +22,6 @@ const LoginPasswordLost = () => {
 			});
 
 			const { json } = await request(url, options);
-
-			console.log(json);
 		}
 	}
 

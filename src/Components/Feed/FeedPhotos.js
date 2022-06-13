@@ -5,6 +5,7 @@ import Loading from "../../Helper/Loading";
 import useFetch from "../../Hooks/useFetch";
 import FeedPhotosItem from "./FeedPhotosItem";
 import styles from "./FeedPhotos.module.css";
+import Empty from "../../Helper/Empty";
 
 const FeedPhotos = ({ setInfinite, page, user, setModalPhoto }) => {
 	const { data, loading, error, request } = useFetch();
@@ -24,7 +25,8 @@ const FeedPhotos = ({ setInfinite, page, user, setModalPhoto }) => {
 
 	if (error) return <Error error={error} />;
 	if (loading) return <Loading />;
-	if (data)
+	if (data && data.length === 0) return <Empty />;
+	if (data && data.length > 0)
 		return (
 			<ul className={`${styles.feed} animeLeft`}>
 				{data.map((photo) => (
