@@ -33,7 +33,7 @@ const LoginCreate = () => {
 
 	return (
 		<section className="animeLeft">
-			<Head login="Criar conta" />
+			<Head title="Criar conta" />
 			<h1 className="title">Cadastre-se</h1>
 			<form onSubmit={handleCreate}>
 				<Input label="Usuário" type="text" name="username" {...username} />

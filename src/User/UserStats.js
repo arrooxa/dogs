@@ -7,15 +7,8 @@ import Loading from "../Helper/Loading";
 import Empty from "../Helper/Empty";
 const UserStatsGraph = React.lazy(() => import("./UserStatsGraph"));
 
-const data = [
-	{ id: 21984, title: "dog3", acessos: "2" },
-	{ id: 21982, title: "dog2", acessos: "1" },
-	{ id: 21980, title: "dog", acessos: "1" },
-	{ id: 21980, title: "dog", acessos: "3" },
-];
-
 const UserStats = () => {
-	const { loading, error, request } = useFetch();
+	const { data, loading, error, request } = useFetch();
 
 	React.useEffect(() => {
 		async function fetchData() {
